@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Psychic Room on King - Personal readings, spiritual remedies, and curated tools in Charleston, SC. Walk-ins welcome; appointments recommended.">
+  <meta name="og:title" content="Psychic Room on King">
+  <meta name="og:description" content="Find clarity that feels like coming home. Personal readings, spiritual remedies, and curated tools — honest, compassionate, and transformative.">
+  <title>Psychic Room on King — Readings & Spiritual Tools</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --charcoal:#1E1A20;
+      --gold:#C9A76B;
+      --cream:#F6F3EE;
+      --jade:#2E7A70;
+      --mauve:#B79AA6;
+      --glass: rgba(255,255,255,0.06);
+      --radius:12px;
+      --max-width:1100px;
+      --transition:.22s ease;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--charcoal);
+      background:linear-gradient(180deg,#F6F3EE 0%, #FBFAF8 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;line-height:1.5}
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px;}
+    .header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;position:relative}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--charcoal)}
+    .logo-mark{
+      width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--charcoal),#2b252b);
+      display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:700;font-family: "Playfair Display", Georgia, serif;
+      box-shadow:0 6px 20px rgba(30,26,32,0.12);
+    }
+    .site-title{font-family:"Playfair Display", Georgia, serif;font-size:18px;line-height:1}
+    .site-sub{font-size:12px;color:#6b666b;margin-top:2px}
+    .nav{display:flex;gap:18px;align-items:center}
+    .nav a{color:var(--charcoal);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600;font-size:14px;transition:var(--transition)}
+    .nav a:hover{background:rgba(201,167,107,0.1)}
+    .cart-icon{position:relative;cursor:pointer;font-size:20px}
+    .cart-badge{position:absolute;top:-8px;right:-8px;background:var(--jade);color:white;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}
+    .cta-book{background:linear-gradient(90deg,var(--gold),#d2b071);padding:10px 16px;border-radius:10px;color:var(--charcoal);text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(201,167,107,0.16);transition:var(--transition);display:inline-block;border:none;cursor:pointer;font-size:14px}
+    .cta-book:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(201,167,107,0.22)}
+    .mobile-menu{display:none;font-size:24px;cursor:pointer}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(180deg, rgba(30,26,32,0.04), rgba(30,26,32,0.02));
+      border-radius:18px;padding:36px;display:flex;gap:36px;align-items:center;margin:18px 0;
+      box-shadow:0 10px 40px rgba(30,26,32,0.05);
+    }
+    .hero-left{flex:1;min-width:240px}
+    .hero-eyebrow{color:var(--jade);font-weight:700;font-size:13px;letter-spacing:.6px}
+    .hero-h{font-family:"Playfair Display", serif;font-size:36px;margin:8px 0;color:var(--charcoal)}
+    .hero-sub{color:#4b484b;font-size:16px;margin-bottom:18px}
+    .hero-ctas{display:flex;gap:12px;align-items:center}
+    .btn-outline{padding:10px 14px;border-radius:10px;border:1px solid rgba(30,26,32,0.08);background:transparent;color:var(--charcoal);text-decoration:none;font-weight:600;transition:var(--transition);display:inline-block;cursor:pointer;font-size:14px}
+    .btn-outline:hover{background:rgba(30,26,32,0.04);border-color:rgba(30,26,32,0.16)}
+    .trustbar{display:flex;gap:12px;align-items:center;color:#5b575b;margin-top:16px;font-size:14px}
+    .pulse{background:var(--gold);color:var(--charcoal);padding:6px 8px;border-radius:8px;font-weight:700;box-shadow:0 8px 22px rgba(201,167,107,0.12);animation:pulse-anim 2s infinite}
+    @keyframes pulse-anim{0%,100%{opacity:1}50%{opacity:0.8}}
+
+    /* hero image */
+    .hero-right{width:420px;height:380px;border-radius:14px;background-image:linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.02));overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .hero-photo{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.02) contrast(.98) saturate(.9)}
+
+    /* Sections */
+    .sections{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:8px}
+    .main{background:transparent}
+    .side{position:sticky;top:28px;align-self:start}
+    .card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 8px 30px rgba(18,16,18,0.03);margin-bottom:18px}
+
+    /* Services cards */
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:8px 0}
+    .service{background:linear-gradient(180deg,#fff,#FBFBFB);padding:18px;border-radius:12px;border:1px solid rgba(30,26,32,0.04);transition:var(--transition)}
+    .service:hover{border-color:var(--gold);box-shadow:0 8px 20px rgba(201,167,107,0.08)}
+    .service h4{margin:0 0 8px;font-size:16px;font-weight:700;font-family:"Playfair Display", serif}
+    .service p{margin:0;color:#615d60;font-size:14px}
+
+    /* Testimonials */
+    .testimonials{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .testi{padding:14px;border-radius:12px;background:linear-gradient(180deg,#FFF9F3, #FFFDFB);border:1px solid rgba(201,167,107,0.06)}
+    .testi p{margin:0 0 8px;color:#3c3a3a;font-size:14px}
+    .testi .who{font-weight:700;font-size:13px;color:var(--charcoal)}
+
+    /* Shop highlight */
+    .shop-grid{display:flex;gap:12px;flex-wrap:wrap}
+    .prod{flex:1 1 140px;min-width:120px;background:#fff;padding:12px;border-radius:12px;text-align:center;border:1px solid rgba(30,26,32,0.04);transition:var(--transition)}
+    .prod:hover{border-color:var(--gold);box-shadow:0 8px 20px rgba(201,167,107,0.08)}
+    .prod img{width:100%;height:90px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+    .prod h5{margin:4px 0;font-size:14px;font-weight:700}
+    .prod p{margin:0;font-size:12px;color:#6b666b}
+    .prod-price{font-weight:700;color:var(--jade);margin:6px 0}
+    .add-to-cart{width:100%;padding:8px;background:var(--gold);border:none;border-radius:8px;color:var(--charcoal);font-weight:600;cursor:pointer;font-size:12px;transition:var(--transition);margin-top:8px}
+    .add-to-cart:hover{opacity:0.9;transform:translateY(-2px)}
+
+    /* About & FAQ */
+    .about-hero{display:flex;gap:16px;align-items:center}
+    .about-hero img{width:120px;height:120px;border-radius:12px;object-fit:cover;box-shadow:0 10px 30px rgba(30,26,32,0.06)}
+    .faq dl{margin:0}
+    .faq dt{font-weight:700;margin-top:12px;cursor:pointer;user-select:none}
+    .faq dd{margin:6px 0 0;color:#5b575b;display:none}
+    .faq dt.active + dd{display:block}
+    .faq dt::before{content:"▶ ";font-size:12px;display:inline-block;margin-right:6px;transition:var(--transition)}
+    .faq dt.active::before{transform:rotate(90deg)}
+
+    /* Contact */
+    .contact-row{display:flex;gap:12px;flex-wrap:wrap}
+    .contact-card{flex:1 1 200px;padding:14px;border-radius:12px;background:#fff;border:1px solid rgba(30,26,32,0.04)}
+
+    /* Modal */
+    .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:100;align-items:center;justify-content:center}
+    .modal.active{display:flex}
+    .modal-content{background:#fff;border-radius:16px;padding:28px;max-width:600px;width:90%;max-height:80vh;overflow-y:auto;position:relative}
+    .modal-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:24px;cursor:pointer;color:#999}
+    .modal-close:hover{color:var(--charcoal)}
+    .cart-item{display:flex;justify-content:space-between;align-items:center;padding:12px;border-bottom:1px solid #eee;gap:12px}
+    .cart-item img{width:60px;height:60px;object-fit:cover;border-radius:8px}
+    .cart-item-details{flex:1;text-align:left}
+    .cart-item-name{font-weight:700;margin:0}
+    .cart-item-price{color:var(--jade);font-weight:600;margin:4px 0}
+    .cart-item-qty{display:flex;gap:6px;align-items:center}
+    .qty-btn{border:1px solid #ddd;background:transparent;width:28px;height:28px;cursor:pointer;border-radius:4px;font-weight:700}
+    .remove-btn{background:#ff6b6b;color:white;border:none;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600}
+    .cart-total{font-size:18px;font-weight:700;padding:12px;text-align:right;border-top:2px solid #eee}
+    .checkout-btn{width:100%;padding:12px;background:var(--jade);color:white;border:none;border-radius:10px;font-weight:700;cursor:pointer;margin-top:12px;font-size:14px}
+    .checkout-btn:hover{opacity:0.9}
+    .empty-cart{text-align:center;padding:40px 20px;color:#999}
+
+    /* Footer */
+    .footer{margin-top:28px;padding:28px 0;color:#5b575b;font-size:14px;border-top:1px solid rgba(30,26,32,0.04)}
+    .footer-grid{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+    /* Sticky book on mobile */
+    .book-sticky{display:none;position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,var(--gold),#d2b071);color:var(--charcoal);padding:12px 16px;border-radius:14px;box-shadow:0 14px 40px rgba(201,167,107,0.18);z-index:40;font-weight:700;text-decoration:none}
+
+    /* Toast notification */
+    .toast{position:fixed;bottom:20px;right:20px;background:var(--jade);color:white;padding:12px 20px;border-radius:8px;z-index:50;animation:slideIn 0.3s ease}
+    @keyframes slideIn{from{transform:translateX(400px)}to{transform:translateX(0)}}
+
+    /* Responsive */
+    @media(max-width:980px){
+      .hero{flex-direction:column;align-items:flex-start;padding:22px}
+      .hero-right{width:100%;height:220px;border-radius:12px}
+      .sections{grid-template-columns:1fr}
+      .site-title{font-size:16px}
+      .nav{display:none}
+      .mobile-menu{display:block}
+      .brand{gap:10px}
+      .hero-h{font-size:28px}
+      .services{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:1fr}
+      .book-sticky{display:block}
+    }
+    @media(max-width:480px){
+      .hero-h{font-size:22px}
+      .logo-mark{width:48px;height:48px}
+      .container{padding:16px}
+      .hero-sub{font-size:15px}
+      .modal-content{padding:16px}
+      .prod{flex:1 1 100px}
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header class="header">
+    <a href="#" class="brand">
+      <div class="logo-mark">P</div>
+      <div>
+        <div class="site-title">Psychic Room</div>
+        <div class="site-sub">On King</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <div class="cart-icon" onclick="openCart()">
+        🛒
+        <div class="cart-badge" id="cartBadge">0</div>
+      </div>
+    </nav>
+    <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">CLARITY • COMFORT • COURAGE</div>
+      <h1 class="hero-h">Find clarity that feels like coming home</h1>
+      <p class="hero-sub">Personal readings, spiritual remedies, and curated tools — honest, compassionate, and transformative. Walk-ins welcome; appointments recommended.</p>
+      
+      <div class="hero-ctas">
+        <a class="cta-book" href="tel:+1-843-555-1234">📞 Call to Book</a>
+        <a class="btn-outline" href="#services">View Services</a>
+      </div>
+
+      <div class="trustbar">
+        <div class="pulse">Locally loved</div>
+        <div>Accurate readings • Candles & stones • Warm, private space</div>
+      </div>
+    </div>
+
+    <div class="hero-right" aria-hidden="true">
+      <img class="hero-photo" src="https://images.unsplash.com/photo-1511974035430-5de47d3b95da?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7c7f3d6a0f1f2f8c8b2c5b6c3a2d1e5f" alt="Warm studio interior with candlelight and crystals">
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="sections">
+    <div class="main">
+
+      <!-- Services -->
+      <section id="services" class="card" aria-labelledby="services-heading">
+        <h2 id="services-heading" style="font-family:'Playfair Display', serif;margin:0 0 8px;font-size:22px">Services</h2>
+        <p style="margin:0 0 12px;color:#5b575b">Readings tailored to your life — honest, grounded, and compassionate.</p>
+        <div class="services">
+          <div class="service">
+            <h4>Palmistry</h4>
+            <p>20 / 40 min — Discover patterns in love, career, and timing.</p>
+            <div style="margin-top:8px"><a class="btn-outline" href="tel:+1-843-555-1234">📞 Call to Book</a></div>
+          </div>
+          <div class="service">
+            <h4>Psychic Intuitive</h4>
+            <p>30 / 60 min — Direct guidance for relationships, work, and growth.</p>
+            <div style="margin-top:8px"><a class="btn-outline" href="tel:+1-843-555-1234">📞 Call to Book</a></div>
+          </div>
+          <div class="service">
+            <h4>Spiritual Remedies</h4>
+            <p>Candles, stones, and energetic practices to shift outcomes.</p>
+            <div style="margin-top:8px"><a class="btn-outline" href="#shop">🛍️ Shop Remedies</a></div>
+          </div>
+          <div class="service">
+            <h4>Intuitive Coaching</h4>
+            <p>Actionable next steps — integrate insights into daily life.</p>
+            <div style="margin-top:8px"><a class="btn-outline" href="tel:+1-843-555-1234">📞 Call to Book</a></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="card" aria-labelledby="testi-heading">
+        <h2 id="testi-heading" style="font-family:'Playfair Display', serif;margin:0 0 8px;font-size:22px">Stories from the Room</h2>
+        <p style="margin:0 0 12px;color:#5b575b">Real experiences from guests who left lighter and clearer.</p>
+        <div class="testimonials">
+          <div class="testi">
+            <p>"Lori made me feel so good. It was a warm, kind, and very revealing session. I'm grateful. I recommend Lori."</p>
+            <div class="who">— Asi Prensa</div>
+          </div>
+          <div class="testi">
+            <p>"She didn't just listen. They saw me, guided me, and helped me step into a version of myself I almost forgot was possible."</p>
+            <div class="who">— Mirko Ballarino</div>
+          </div>
+          <div class="testi">
+            <p>"Amazing experience — opened up my eyes a lot more! I look forward to another session."</p>
+            <div class="who">— Nay Tovar</div>
+          </div>
+          <div class="testi">
+            <p>"Immediate read on my relationships and offered paths forward to improve connections."</p>
+            <div class="who">— Teresa Moore</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shop highlight -->
+      <section id="shop" class="card" aria-labelledby="shop-heading">
+        <h2 id="shop-heading" style="font-family:'Playfair Display', serif;margin:0 0 8px;font-size:22px">Shop — Curated Tools</h2>
+        <p style="margin:0 0 12px;color:#5b575b">Candles, protective stones, and bundles chosen for clarity and protection.</p>
+        <div class="shop-grid">
+          <div class="prod">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3f4a7d5c6e7b2b9db5c2b5b2a6f9d2a1" alt="hand-poured candle">
+            <h5>Protection Candle</h5>
+            <p>Hand-poured soy, cedar & sage</p>
+            <div class="prod-price">$18</div>
+            <button class="add-to-cart" onclick="addToCart('Protection Candle', 18, 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3f4a7d5c6e7b2b9db5c2b5b2a6f9d2a1')">Add to Cart</button>
+          </div>
+          <div class="prod">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1a2b3c4d5e6f7g8h9i0j" alt="protective stones">
+            <h5>Protection Stones</h5>
+            <p>Curated set for grounding & clarity</p>
+            <div class="prod-price">$22</div>
+            <button class="add-to-cart" onclick="addToCart('Protection Stones', 22, 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1a2b3c4d5e6f7g8h9i0j')">Add to Cart</button>
+          </div>
+          <div class="prod">
+            <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcdef1234567890" alt="bundle">
+            <h5>Starter Bundle</h5>
+            <p>Candle + stones + guidance card</p>
+            <div class="prod-price">$34</div>
+            <button class="add-to-cart" onclick="addToCart('Starter Bundle', 34, 'https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcdef1234567890')">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="card" aria-labelledby="about-heading">
+        <h2 id="about-heading" style="font-family:'Playfair Display', serif;margin:0 0 8px;font-size:22px">Meet Lori</h2>
+        <div class="about-hero">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1f2d3e4c5b6a7d8e9f0a" alt="Lori portrait">
+          <div>
+            <p style="margin:0 0 8px;color:#5b575b">Lori brings compassionate clarity through palmistry and intuitive readings. Clients leave with practical guidance, renewed courage, and often a lighter heart. Her approach is warm, honest, and grounded — a trusted presence on King Street.</p>
+            <p style="margin:0"><a class="cta-book" href="tel:+1-843-555-1234">📞 Call to Book</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="card faq" aria-labelledby="faq-heading">
+        <h3 id="faq-heading" style="font-family:'Playfair Display', serif;margin:0 0 8px;font-size:20px">FAQ</h3>
+        <dl>
+          <dt onclick="toggleFAQ(this)">What should I expect?</dt>
+          <dd>Warm, private session focused on clarity and practical next steps — be open, bring questions if you like.</dd>
+          
+          <dt onclick="toggleFAQ(this)">How to prepare?</dt>
+          <dd>Arrive a few minutes early, bring a short list of concerns (optional). No special attire required.</dd>
+          
+          <dt onclick="toggleFAQ(this)">Cancellation & refunds?</dt>
+          <dd>Please notify 24 hours in advance for a full refund or to reschedule.</dd>
+          
+          <dt onclick="toggleFAQ(this)">Do you ship shop items?</dt>
+          <dd>Yes — local pickup available, shipping across the U.S. for select items.</dd>
+        </dl>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="card" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" style="font-family:'Playfair Display', serif;margin:0 0 8px;font-size:22px">Get in Touch</h2>
+        <div class="contact-row">
+          <div class="contact-card">
+            <h4 style="margin:0 0 8px;font-family:'Playfair Display', serif">Call or Text</h4>
+            <a href="tel:+1-843-555-1234" style="color:var(--jade);font-weight:700;text-decoration:none">(843) 555-1234</a>
+          </div>
+          <div class="contact-card">
+            <h4 style="margin:0 0 8px;font-family:'Playfair Display', serif">Email</h4>
+            <a href="mailto:hello@psychicroomonking.com" style="color:var(--jade);font-weight:700;text-decoration:none">hello@psychicroomonking.com</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="side">
+      <div class="card">
+        <h4 style="margin:0 0 8px;font-family:'Playfair Display', serif">Quick Booking</h4>
+        <p style="margin:0 0 12px;color:#5b575b">Call to reserve your reading or ask questions.</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a class="cta-book" href="tel:+1-843-555-1234">📞 Call to Book</a>
+          <a class="btn-outline" href="#contact">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 style="margin:0 0 8px;font-family:'Playfair Display', serif">Hours & Location</h4>
+        <p style="margin:0 0 6px;font-weight:700">123 King Street</p>
+        <p style="margin:0 0 6px">Charleston, SC 29401</p>
+        <p style="margin:0 0 12px;font-size:14px;color:#5b575b">Tue–Sun: 11am–7pm • Closed Mon</p>
+        <a class="btn-outline" href="https://maps.google.com" target="_blank" rel="noopener">📍 Open in maps</a>
+      </div>
+
+      <div class="card">
+        <h4 style="margin:0 0 8px;font-family:'Playfair Display', serif">Your Cart</h4>
+        <p id="cartSummary" style="margin:0 0 8px;color:#5b575b;font-size:14px">No items yet</p>
+        <button class="cta-book" onclick="openCart()" style="width:100%">🛒 View Cart</button>
+      </div>
+
+      <div class="card">
+        <h4 style="margin:0 0 8px;font-family:'Playfair Display', serif">Reviews</h4>
+        <p style="margin:0 0 8px;color:#5b575b">"Great experience, had lots of guidance... very satisfied."</p>
+        <a class="btn-outline" href="#testimonials">Read more</a>
+      </div>
+    </aside>
+
+  </div>
+
+</div>
+
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeCart()">✕</button>
+    <h2 style="margin:0 0 16px;font-family:'Playfair Display', serif">🛒 Your Cart</h2>
+    <div id="cartItems"></div>
+    <div id="cartTotal" class="cart-total"></div>
+    <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+  </div>
+</div>
+
+<!-- Sticky mobile book button -->
+<a href="tel:+1-843-555-1234" class="book-sticky">📞 Call to Book</a>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <p style="margin:0;font-weight:700">Psychic Room on King</p>
+      <p style="margin:4px 0 0">Charleston, SC</p>
+    </div>
+    <div style="text-align:right">
+      <p style="margin:0">© 2026 All rights reserved</p>
+      <p style="margin:4px 0 0">Designed by addievwalker3-design</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Cart functionality with localStorage
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  function addToCart(name, price, image) {
+    const existingItem = cart.find(item => item.name === name);
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      cart.push({ name, price, image, quantity: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartBadge();
+    showToast(`✨ ${name} added to cart!`);
+  }
+
+  function updateCartBadge() {
+    const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+    document.getElementById('cartBadge').textContent = total;
+    updateCartSummary();
+  }
+
+  function updateCartSummary() {
+    const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const summary = document.getElementById('cartSummary');
+    if (total === 0) {
+      summary.textContent = 'No items yet';
+    } else {
+      summary.textContent = `${total} item${total !== 1 ? 's' : ''} • $${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}`;
+    }
+  }
+
+  function openCart() {
+    const cartItems = document.getElementById('cartItems');
+    const cartTotal = document.getElementById('cartTotal');
+    
+    if (cart.length === 0) {
+      cartItems.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
+      cartTotal.innerHTML = '';
+    } else {
+      cartItems.innerHTML = cart.map((item, index) => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.name}">
+          <div class="cart-item-details">
+            <p class="cart-item-name">${item.name}</p>
+            <p class="cart-item-price">$${item.price}</p>
+          </div>
+          <div class="cart-item-qty">
+            <button class="qty-btn" onclick="updateQty(${index}, -1)">−</button>
+            <span style="min-width:20px;text-align:center">${item.quantity}</span>
+            <button class="qty-btn" onclick="updateQty(${index}, 1)">+</button>
+          </div>
+          <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+        </div>
+      `).join('');
+      
+      const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      cartTotal.innerHTML = `Total: $${total.toFixed(2)}`;
+    }
+    
+    document.getElementById('cartModal').classList.add('active');
+  }
+
+  function closeCart() {
+    document.getElementById('cartModal').classList.remove('active');
+  }
+
+  function updateQty(index, change) {
+    cart[index].quantity += change;
+    if (cart[index].quantity <= 0) {
+      cart.splice(index, 1);
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartBadge();
+    openCart();
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartBadge();
+    openCart();
+  }
+
+  function checkout() {
+    if (cart.length === 0) {
+      alert('Your cart is empty');
+      return;
+    }
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    alert(`Order total: $${total.toFixed(2)}\n\nPlease call (843) 555-1234 to complete your purchase.`);
+    cart = [];
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartBadge();
+    closeCart();
+  }
+
+  function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 2000);
+  }
+
+  function toggleFAQ(element) {
+    element.classList.toggle('active');
+  }
+
+  function toggleMenu() {
+    const nav = document.querySelector('.nav');
+    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  // Initialize cart on page load
+  updateCartBadge();
+
+  // Close cart modal when clicking outside
+  document.getElementById('cartModal').addEventListener('click', (e) => {
+    if (e.target.id === 'cartModal') closeCart();
+  });
+</script>
+
+</body>
+</html>
