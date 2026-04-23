@@ -554,7 +554,181 @@
         <a href="#shop">Shop</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="#booking" class="cta-book">Book a Reading</a>
+        <a href="#booking"<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">✨ Clarity • Comfort • Courage</div>
+    <h1 class="hero-h">Find clarity that feels like coming home</h1>
+    <p class="hero-sub">Personal readings, spiritual remedies, and curated tools — honest, compassionate, and transformative. Walk-ins welcome; appointments recommended.</p>
+    <div class="hero-ctas">
+      <a href="#booking" class="cta-book">Book a Reading</a>
+      <a href="#services" class="btn-outline">View Services</a>
+    </div>
+    <div class="trustbar">
+      <div class="pulse">Locally loved</div>
+      <div>Accurate readings • Candles & stones • Warm, private space</div>
+    </div>
+  </div>
+  <div class="hero-right" aria-hidden="true">
+    <img class="hero-photo" src="https://images.unsplash.com/photo-1511974035430-5de47d3b95da?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7c7f3d6a0f1f2f8c8b2c5b6c3a2d1e5f" alt="Warm studio interior with candlelight and crystals">
+  </div>
+</section>
+
+<!-- Main Sections -->
+<div class="sections">
+  <main class="main">
+    <!-- Services -->
+    <section id="services" class="card" aria-labelledby="services-heading">
+      <h2 id="services-heading">Services</h2>
+      <p style="margin: 0 0 12px; color: #5b575b;">Readings tailored to your life — honest, grounded, and compassionate.</p>
+      <div class="services">
+        <div class="service">
+          <h4>Palmistry</h4>
+          <p>20 / 40 min — Discover patterns in love, career, and timing. Immediate clarity and practical next steps.</p>
+          <div style="margin-top: 8px;"><a href="#booking" class="btn-outline">Book Palmistry</a></div>
+        </div>
+        <div class="service">
+          <h4>Psychic Intuitive</h4>
+          <p>30 / 60 min — Direct guidance for relationships, work, and personal growth. Gentle, accurate, and compassionate.</p>
+          <div style="margin-top: 8px;"><a href="#booking" class="btn-outline">Book Psychic</a></div>
+        </div>
+        <div class="service">
+          <h4>Spiritual Remedies</h4>
+          <p>Custom candles, stones, and tailored energetic practices to shift outcomes and protect your path.</p>
+          <div style="margin-top: 8px;"><a href="#shop" class="btn-outline">Shop Remedies</a></div>
+        </div>
+        <div class="service">
+          <h4>Intuitive Coaching</h4>
+          <p>Actionable next steps after readings — integrate insights into daily life with supportive coaching.</p>
+          <div style="margin-top: 8px;"><a href="#booking" class="btn-outline">Learn More</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="card" aria-labelledby="testi-heading">
+      <h2 id="testi-heading">Stories from the Room</h2>
+      <p style="margin: 0 0 12px; color: #5b575b;">Real experiences from guests who left lighter and clearer.</p>
+      <div class="testimonials">
+        <div class="testi">
+          <p>"Lori made me feel so good. It was a warm, kind, and very revealing session. I'm grateful. I recommend Lori."</p>
+          <p class="who">— Asi Prensa</p>
+        </div>
+        <div class="testi">
+          <p>"She didn't just listen. They saw me, guided me, and helped me step into a version of myself I almost forgot was possible."</p>
+          <p class="who">— Mirko Ballarino</p>
+        </div>
+        <div class="testi">
+          <p>"Amazing experience — opened up my eyes a lot more! I look forward to another session."</p>
+          <p class="who">— Nay Tovar</p>
+        </div>
+        <div class="testi">
+          <p>"Immediate read on my relationships and offered paths forward to improve connections."</p>
+          <p class="who">— Teresa Moore</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section id="shop" class="card" aria-labelledby="shop-heading">
+      <h2 id="shop-heading">Shop — Curated Tools</h2>
+      <p style="margin: 0 0 12px; color: #5b575b;">Candles, protective stones, and bundles chosen for clarity and protection.</p>
+      <div class="shop-grid">
+        <div class="prod">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Hand-poured protection candle with cedar and sage">
+          <h5>Protection Candle</h5>
+          <p>Hand-poured soy, calming cedar & sage • $18</p>
+          <div style="margin-top: 8px;"><a href="#booking" class="btn-outline">Add to cart</a></div>
+        </div>
+        <div class="prod">
+          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop" alt="Curated protective stones for grounding and clarity">
+          <h5>Protection Stones</h5>
+          <p>Curated set for grounding & clarity • $22</p>
+          <div style="margin-top: 8px;"><a href="#booking" class="btn-outline">Add to cart</a></div>
+        </div>
+        <div class="prod">
+          <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=800&auto=format&fit=crop" alt="Starter bundle with candle, stones, and guidance card">
+          <h5>Starter Bundle</h5>
+          <p>Candle + stones + guidance card • $34</p>
+          <div style="margin-top: 8px;"><a href="#booking" class="btn-outline">Add to cart</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="card" aria-labelledby="about-heading">
+      <h2 id="about-heading">Meet Lori</h2>
+      <div class="about-hero">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Lori portrait">
+        <div>
+          <p style="margin: 0 0 8px; color: #5b575b;">Lori brings compassionate clarity through palmistry and intuitive readings. Clients leave with practical guidance, renewed courage, and often a lighter heart. Her approach is warm, honest, and grounded — a trusted presence on King Street since 2019.</p>
+          <p style="margin: 0;"><a href="#booking" class="btn-outline">Book with Lori</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="card faq" aria-labelledby="faq-heading">
+      <h3 id="faq-heading">FAQ</h3>
+      <dl>
+        <dt>What should I expect?</dt>
+        <dd>Warm, private session focused on clarity and practical next steps — be open, bring questions if you like.</dd>
+        <dt>How to prepare?</dt>
+        <dd>Arrive a few minutes early, bring a short list of concerns (optional). No special attire required.</dd>
+        <dt>Cancellation & refunds?</dt>
+        <dd>Please notify 24 hours in advance for a full refund or to reschedule.</dd>
+        <dt>Do you ship shop items?</dt>
+        <dd>Yes — local pickup available, shipping across the U.S. for select items.</dd>
+      </dl>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Get in Touch</h2>
+      <p style="margin: 0 0 12px; color: #5b575b;">Have questions? Reach out anytime.</p>
+      <div class="contact-row">
+        <div class="contact-card">
+          <strong>📍 Location</strong>
+          <p style="margin: 4px 0; font-size: 14px;">123 King Street, Charleston, SC 29401</p>
+        </div>
+        <div class="contact-card">
+          <strong>📞 Phone</strong>
+          <p style="margin: 4px 0; font-size: 14px;"><a href="tel:+18435551234">(843) 555-1234</a></p>
+        </div>
+        <div class="contact-card">
+          <strong>✉️ Email</strong>
+          <p style="margin: 4px 0; font-size: 14px;"><a href="mailto:hello@psychicroomonking.com">hello@psychicroomonking.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="side">
+    <div class="card">
+      <h4 style="margin: 0 0 8px;">Quick Booking</h4>
+      <p style="margin: 0 0 12px; color: #5b575b; font-size: 14px;">Select a service and reserve your time. Secure payments via Stripe.</p>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <a href="#booking" class="cta-book" style="text-align: center;">Book a Reading</a>
+        <a href="#contact" class="btn-outline" style="text-align: center;">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 style="margin: 0 0 8px;">Hours & Location</h4>
+      <p style="margin: 0 0 6px; font-size: 14px;"><strong>📍</strong> 123 King St, Charleston, SC</p>
+      <p style="margin: 0 0 6px; font-size: 14px;"><strong>🕐</strong> Tue–Sun: 11am–7pm</p>
+      <p style="margin: 0 0 12px; font-size: 14px; color: #999;">Closed Mondays</p>
+      <a href="https://maps.google.com/maps/place/123+King+Street,+Charleston,+SC" target="_blank" rel="noopener" class="btn-outline" style="display: block; text-align: center;">Open in Maps</a>
+    </div>
+
+    <div class="card">
+      <h4 style="margin: 0 0 8px;">Reviews</h4>
+      <p style="margin: 0 0 8px; color: #5b575b; font-size: 14px;">⭐ "Great experience, had lots of guidance from start to finish. Very satisfied." — Google Reviews</p>
+      <a href="#testimonials" class="btn-outline" style="display: block; text-align: center;">Read more stories</a>
+    </div>
+  </aside>
+</div>
       </nav>
       <button class="mobile-menu" aria-label="Toggle menu">☰</button>
     </header>
@@ -737,7 +911,7 @@
   </div>
 
   <!-- Sticky Book Button (Mobile) -->
-  <a href="#booking" class="book-sticky">📅 Book Now</a>
+  <a href="#booking" <a href="tel:+1-843-555-1234" class="cta-book">Call to Book</a>
 
   <!-- Footer -->
   <footer class="footer">
